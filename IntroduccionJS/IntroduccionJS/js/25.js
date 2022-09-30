@@ -11,10 +11,12 @@ const carrito = [
 
 
 //forEach (puede ser utilizado unicamente en arreglos se ejecuta una sola vez por cada elemento que haya en un arreglo)
-
+// Es solo para iterar los elementos de un arreglo
 carrito.forEach(producto=> console.log(producto.nombre));
 
 
-//Map
+//Map (Es para crear un nuevo arreglo y se asigna a una nueva variable)
 
-carrito.map(producto => console.log(producto.nombre));
+const arreglo2 = carrito.map(producto =>(`${producto.nombre} - ${producto.precio}`));
+
+console.log(arreglo2)
