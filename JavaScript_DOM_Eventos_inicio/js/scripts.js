@@ -104,7 +104,7 @@ formulario.addEventListener('submit', function (evento) { //Submit asociado al f
     const {nombre, email, mensaje} = datos;
     if(nombre===''|| email===''||mensaje===''){
         mostrarAlerta('Todos los campos son obligatorios', 'error');
-        return;
+        return; //Corta la ejecución del codigo
     }
     mostrarAlerta('El formulario ha sido enviado correctamente');
     //Enviar el formulario
