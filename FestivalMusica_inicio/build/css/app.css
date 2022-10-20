@@ -385,3 +385,20 @@ h3 {
 .header {
   background-color: #4CB8B3;
 }
+.header h1 {
+  color: #fff;
+}
+
+.navegacion-principal a {
+  color: #fff;
+  font-size: 2.4rem;
+}
+.navegacion-principal a:hover {
+  color: #FEF46D;
+}
+
+.prubea {
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+}
