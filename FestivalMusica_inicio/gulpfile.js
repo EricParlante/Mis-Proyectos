@@ -52,14 +52,22 @@ function versionAvif(done) {
     done();
 }
 
+function javascript(done){// funcion escucha y envia archivos js a build
+    src('src/js/**/*.js') //Escuchar todos los archivos js
+        .pipe(dest('build/js'));
+    done();
+}
+
 function dev(done){
-    watch('src/scss/**/*.scss', css)
+    watch('src/scss/**/*.scss', css);
+    watch('src/js/**/*.js', javascript); //llama la funcion javascript con la funcion dev
 
     done();
 }
 
 exports.css = css;
+exports.js = javascript; // por si queremos ejecutar la funcion sola desde el comando
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(imagenes, versionWebp, versionAvif, dev); //permite ejecutar dos funciones
+exports.dev = parallel(imagenes, versionWebp, versionAvif, javascript, dev); //permite ejecutar dos funciones

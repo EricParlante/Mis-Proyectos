@@ -10,7 +10,7 @@
     }
     .dia {
         text-transform: uppercase;
-        margin-bottom: 5rem;
+        margin: 5rem 0 ;
     }
 }
 .escenarios-contenedor{
@@ -43,9 +43,27 @@
 .rock .nombre-escenario:after {
     background-image: url(../img/icono_rock.png);
 }
-.bg-amarillo{
+.calendario {
+    @include m.resetear-lista;
+    li {
+        padding: 2.5rem;
+        font-weight: bold;
+        span{
+            font-weight: normal;
+        }
+    }
+}
+.bg-amarillo {
     background-color: v.$amarillo;
+    
+    li:nth-child(odd) { //Selecciona los que son impares.
+        background-color: darken(v.$amarillo, 10%);
+    }
 }
 .bg-verde{
     background-color: v.$verde;
+
+    li:nth-child(odd) { //Selecciona los que son impares.
+            background-color: darken(v.$verde, 10%);// Porcentaje de oscuridad al color
+        }
 }
