@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function(){
 function iniciarApp(){
     crearGaleria();
 };
+
 function crearGaleria(){
     const galeria = document.querySelector('.galeria-imagenes');
 
